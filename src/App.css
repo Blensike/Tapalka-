@@ -1,38 +1,132 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("../public/blue-bg-art.jpg"); /* Путь к изображению */
+  background-size: cover; /* Масштабирует изображение по размеру экрана */
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Избегает повторения изображения */
+  background-attachment: fixed;
+}
+.container {
+  width: 100vw; /* Занимает всю ширину экрана */
+  height: 100vh; /* Занимает всю высоту экрана */
+  backdrop-filter: blur(20px);
+  color: #fff;
+}
+.score {
+  display: inline-block;
+
+  padding: 10px 20px;
+  width: 200px;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+  border-radius: 20px; /* Закругленные углы */
+  color: white; /* Белый текст */
+  font-size: 18px; /* Размер шрифта */
+  font-weight: bold; /* Жирный текст */
+
+  /* Выпуклая граница с разной толщиной */
+  border-top: 4px solid rgba(255, 255, 255, 0.6); /* Верхняя граница толще и светлее */
+
+  border-left: 3px solid rgba(255, 255, 255, 0.4); /* Левые и правые границы */
+  border-right: 3px solid rgba(255, 255, 255, 0.4); /* Границы сбоку */
+
+  box-shadow: 1px -10px 24px -1px rgba(255, 255, 255, 0.6);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.scoreText {
+  font-size: 12px;
+  color: #ffffff86;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.circle {
+  /* Размеры и форма круга */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Создает круг */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* Фон и позиционирование */
+  background-color: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  /* Границы для эффекта выпуклости */
+  border-top: 6px solid rgba(255, 255, 255, 0.6); /* Верхняя граница — толще и светлее */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Нижняя граница — тоньше и темнее */
+  border-left: 2px solid rgba(255, 255, 255, 0.3); /* Левая граница */
+  border-right: 2px solid rgba(255, 255, 255, 0.3); /* Правая граница */
+  transition: none;
+}
+
+.circle:active {
+  background: rgba(140, 140, 140, 0.1);
+
+  border-top: 6px solid rgba(177, 177, 177, 0.6); /* Верхняя граница — толще и светлее */
+  border-bottom: 2px solid rgba(151, 151, 151, 0.2); /* Нижняя граница — тоньше и темнее */
+  border-left: 2px solid rgba(150, 150, 150, 0.3); /* Левая граница */
+  border-right: 2px solid rgba(150, 150, 150, 0.3); /* Правая граница */
+}
+
+.circle span {
+  /* Стилизация контента внутри круга */
   color: white;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.circle::before {
+  /* Дополнительный эффект градиента для глянцевости */
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 230px;
+  height: 230px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.5),
+    transparent 60%
+  );
+  border-radius: 50%;
+  z-index: -1; /* Помещаем позади основного круга */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.circle button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 100px;
+  background: none;
+  width: 100%;
+  height: 100%;
+}
+
+.tapElement {
+  width: 100px;
+  height: 100px;
+  background-image: url("../public/tapRock.png");
+  background-size: cover; /* Масштабирует изображение */
+  background-position: center;
+}
+
+.display-off {
+  display: none;
+}
+.display-on {
+  display: block;
 }

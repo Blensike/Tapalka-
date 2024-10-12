@@ -1,0 +1,44 @@
+.dropdown-accord {
+  position: absolute;
+  left: 700px;
+  padding: 0 !important;
+}
+
+.nav-link-custom {
+  color: #fff;
+  font-size: 15px;
+  vertical-align: middle;
+  text-align: center;
+}
+.imgEnergy {
+  width: 25px;
+  height: 20px;
+  background-image: url("../../../public/energy.png");
+  background-size: cover; /* Масштабирует изображение */
+  background-position: center;
+}
+.nav-link-custom button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
+  border: #333 solid 1px;
+  margin: 0;
+  color: #333;
+  background-color: #fff;
+  font-weight: bold;
+}
+
+.nav-link-custom button:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.custom-navbar-brand {
+  padding: 10px;
+  background: rgb(212, 212, 212, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  font-size: 15px !important;
+}

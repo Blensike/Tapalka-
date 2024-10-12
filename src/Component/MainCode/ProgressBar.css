@@ -1,0 +1,13 @@
+.progress-bar {
+  background-color: #76c7c0;
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.3s ease; /* Плавная анимация */
+}
+
+.progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+  height: 20px;
+}

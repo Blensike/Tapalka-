@@ -1,0 +1,28 @@
+.ProfitPer button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 20px;
+  background-color: #33333380;
+  color: #fff;
+
+  width: 165px;
+  height: 80px;
+
+  border-top: 4px solid rgba(255, 255, 255, 0.6); /* Верхняя граница толще и светлее */
+
+  border-left: 3px solid rgba(255, 255, 255, 0.4); /* Левые и правые границы */
+  border-right: 3px solid rgba(255, 255, 255, 0.4); /* Границы сбоку */
+}
+
+.ProfitPer button:focus {
+  background: #ffffff72;
+  backdrop-filter: blur(20px);
+  border-top: 4px solid #333; /* Верхняя граница толще и светлее */
+
+  border-left: 3px solid #333; /* Левые и правые границы */
+  border-right: 3px solid #333; /* Границы сбоку */
+}
